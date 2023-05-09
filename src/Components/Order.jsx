@@ -2,6 +2,7 @@ import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { transition } from '@chakra-ui/react';
+import { useEffect } from 'react';
 const containerVariant={
 
   hidden:{ opacity:0, x:"100vw"},
@@ -31,7 +32,12 @@ const childVariant={
     transition:{type:"spring", duration:1.5}
   }
 }
-const Order = ({ pizza }) => {
+const Order = ({ pizza,setShowModal }) => {
+  useEffect(()=>{
+    setTimeout(()=>{
+        setShowModal(true)
+    },500)
+  })
   
   return (
     <motion.div className="container order"
