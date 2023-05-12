@@ -1,16 +1,16 @@
 
 import { Link } from 'react-router-dom';
 import { easeInOut, motion } from 'framer-motion';
+import Loader from './Loader';
 
 const buttonVariant={
 
   hover:{
-    scale:1.1,
-    originX:0,
+    scale:[1,1.5,1,1.5],
+   
     textShadow:"0px 0px 8px rgb(255,255,255)",
     boxShadow:"0px 0px 8px rgb(255,255,255)",
     transition:{
-      duration:0.3,
       yoyo:Infinity
     }
    
@@ -50,6 +50,7 @@ const Home = () => {
           Create Your Pizza
         </motion.button>
       </Link>
+      <Loader/>
     </motion.div >
   )
 }
