@@ -1,10 +1,10 @@
-import React from 'react'
+
 import { useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Base from './Components/Base';
 import Header from './Components/Header';
 import Home from './Components/Home';
-import Order from './components/Order';
+import Order from './Components/Order';
 import Toppings from './Components/Toppings';
 import { AnimatePresence } from 'framer-motion';
 import Modal from './Components/Modal';
